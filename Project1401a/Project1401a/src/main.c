@@ -13,7 +13,7 @@
  *
  * -# Minimal main function that starts with a call to PIOB_init()
  *
- * This program does not rely on the hardware API (ASF) provided by Atmel fior the I/O drivers, 
+ * This program does not rely on the hardware API (ASF) provided by Atmel for the I/O drivers, 
  * but it relies on ASF
  * Atmel Software Framework (ASF). 
  *
@@ -33,17 +33,17 @@ typedef uint32_t register_data;
 */
 
 #define PIOB_PER (*p_PIOB_PER)
-#define PIOB_PSR (*p_PIOB_PSR)
+// #define PIOB_PSR (*p_PIOB_PSR)
 #define PIOB_OER (*p_PIOB_OER)
-#define PIOB_ODR (*p_PIOB_ODR)
+// #define PIOB_ODR (*p_PIOB_ODR)
 #define PIOB_SODR (*p_PIOB_SODR)
 #define PIOB_CODR (*p_PIOB_CODR)
-#define PIOB_MDER (*p_PIOB_MDER)
-#define PIOB_MDDR (*p_PIOB_MDDR)
+// #define PIOB_MDER (*p_PIOB_MDER)
+// #define PIOB_MDDR (*p_PIOB_MDDR)
 #define PIOB_OWER (*p_PIOB_OWER)
-#define PIOB_OWDR (*p_PIOB_OWDR)
-#define PIOB_ODSR (*p_PIOB_ODSR)
-#define PIOB_ABSR (*p_PIOB_ABSR)
+// #define PIOB_OWDR (*p_PIOB_OWDR)
+// #define PIOB_ODSR (*p_PIOB_ODSR)
+// #define PIOB_ABSR (*p_PIOB_ABSR)
 
 void PIOB_init(int);	/* declaration of function that initiates the B I/O-port */
 
