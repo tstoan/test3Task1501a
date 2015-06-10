@@ -33,6 +33,7 @@ LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
+../unity \
 ../src/ASF/common/services/serial/ \
 ../src/ASF/common/services/serial/sam_uart/ \
 ../src/ASF/common/utils/stdio/ \
@@ -95,12 +96,13 @@ C_SRCS +=  \
 ../src/ASF/common/utils/stdio/read.c \
 ../src/ASF/sam/drivers/usart/usart.c \
 ../src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.c \
+../src/digitalIO.c \
+../unity/unity.c \
 ../src/ASF/common/utils/stdio/write.c \
 ../src/ASF/common/services/serial/usart_serial.c \
 ../src/ASF/sam/drivers/uart/uart.c \
 ../test/test_digitalIO.c \
 ../test/test_digitalIO_runner.c \
-../test/unity.c \
 ../src/ASF/common/services/clock/sam3x/sysclk.c \
 ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.c \
 ../src/ASF/sam/boards/arduino_due_x/init.c \
@@ -124,12 +126,13 @@ OBJS +=  \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/usart/usart.o \
 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o \
+src/digitalIO.o \
+unity/unity.o \
 src/ASF/common/utils/stdio/write.o \
 src/ASF/common/services/serial/usart_serial.o \
 src/ASF/sam/drivers/uart/uart.o \
 test/test_digitalIO.o \
 test/test_digitalIO_runner.o \
-test/unity.o \
 src/ASF/common/services/clock/sam3x/sysclk.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
 src/ASF/sam/boards/arduino_due_x/init.o \
@@ -146,12 +149,13 @@ OBJS_AS_ARGS +=  \
 src/ASF/common/utils/stdio/read.o \
 src/ASF/sam/drivers/usart/usart.o \
 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o \
+src/digitalIO.o \
+unity/unity.o \
 src/ASF/common/utils/stdio/write.o \
 src/ASF/common/services/serial/usart_serial.o \
 src/ASF/sam/drivers/uart/uart.o \
 test/test_digitalIO.o \
 test/test_digitalIO_runner.o \
-test/unity.o \
 src/ASF/common/services/clock/sam3x/sysclk.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
 src/ASF/sam/boards/arduino_due_x/init.o \
@@ -168,12 +172,13 @@ C_DEPS +=  \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/usart/usart.d \
 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.d \
+src/digitalIO.d \
+unity/unity.d \
 src/ASF/common/utils/stdio/write.d \
 src/ASF/common/services/serial/usart_serial.d \
 src/ASF/sam/drivers/uart/uart.d \
 test/test_digitalIO.d \
 test/test_digitalIO_runner.d \
-test/unity.d \
 src/ASF/common/services/clock/sam3x/sysclk.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
 src/ASF/sam/boards/arduino_due_x/init.d \
@@ -190,12 +195,13 @@ C_DEPS_AS_ARGS +=  \
 src/ASF/common/utils/stdio/read.d \
 src/ASF/sam/drivers/usart/usart.d \
 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.d \
+src/digitalIO.d \
+unity/unity.d \
 src/ASF/common/utils/stdio/write.d \
 src/ASF/common/services/serial/usart_serial.d \
 src/ASF/sam/drivers/uart/uart.d \
 test/test_digitalIO.d \
 test/test_digitalIO_runner.d \
-test/unity.d \
 src/ASF/common/services/clock/sam3x/sysclk.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
 src/ASF/sam/boards/arduino_due_x/init.d \
@@ -218,10 +224,13 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 
 LIB_DEP+= 
 
-LINKER_SCRIPT_DEP+= 
+LINKER_SCRIPT_DEP+=  \
+../src/ASF/sam/utils/linker_scripts/sam3x/sam3x8/gcc/flash.ld
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 
@@ -278,6 +287,20 @@ src/ASF/sam/drivers/usart/%.o: ../src/ASF/sam/drivers/usart/%.c
 	
 
 src/ASF/thirdparty/wireless/addons/sio2host/uart/%.o: ../src/ASF/thirdparty/wireless/addons/sio2host/uart/%.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 4.8.4
+	$(QUOTE)C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DBOARD=ARDUINO_DUE_X -Dscanf=iscanf -DARM_MATH_CM3=true -Dprintf=iprintf -D__SAM3X8E__  -I"../common/applications/user_application/sam3x8e_arduino_due_x/config" -I"../src/ASF/sam/utils/cmsis/sam3x/include" -I"../src/config" -I"../src/ASF/thirdparty/CMSIS/Lib/GCC" -I"../src/ASF/common/utils" -I"../src" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/gpio" -I"../src/ASF/sam/drivers/pmc" -I"../src/ASF/sam/utils" -I"../src/ASF/sam/utils/preprocessor" -I"../src/ASF/sam/boards" -I"../src/ASF/common/boards" -I"../src/ASF/sam/drivers/pio" -I"../src/ASF/sam/boards/arduino_due_x" -I"../src/ASF/sam/utils/header_files" -I"../src/ASF/sam/utils/cmsis/sam3x/source/templates" -I"../src/ASF/common/services/ioport" -I"../src/ASF/thirdparty/CMSIS/Include" -I"../src/ASF/sam/drivers/uart" -I"../src/ASF/common/services/serial/sam_uart" -I"../src/ASF/common/services/serial" -I"../src/ASF/common/utils/stdio/stdio_serial" -I"../src/ASF/sam/drivers/usart" -I"../src/ASF/thirdparty/wireless/addons/sio2host/uart"  -O1 -fdata-sections -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/%.o: ../src/%.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 4.8.4
+	$(QUOTE)C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DBOARD=ARDUINO_DUE_X -Dscanf=iscanf -DARM_MATH_CM3=true -Dprintf=iprintf -D__SAM3X8E__  -I"../common/applications/user_application/sam3x8e_arduino_due_x/config" -I"../src/ASF/sam/utils/cmsis/sam3x/include" -I"../src/config" -I"../src/ASF/thirdparty/CMSIS/Lib/GCC" -I"../src/ASF/common/utils" -I"../src" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/gpio" -I"../src/ASF/sam/drivers/pmc" -I"../src/ASF/sam/utils" -I"../src/ASF/sam/utils/preprocessor" -I"../src/ASF/sam/boards" -I"../src/ASF/common/boards" -I"../src/ASF/sam/drivers/pio" -I"../src/ASF/sam/boards/arduino_due_x" -I"../src/ASF/sam/utils/header_files" -I"../src/ASF/sam/utils/cmsis/sam3x/source/templates" -I"../src/ASF/common/services/ioport" -I"../src/ASF/thirdparty/CMSIS/Include" -I"../src/ASF/sam/drivers/uart" -I"../src/ASF/common/services/serial/sam_uart" -I"../src/ASF/common/services/serial" -I"../src/ASF/common/utils/stdio/stdio_serial" -I"../src/ASF/sam/drivers/usart" -I"../src/ASF/thirdparty/wireless/addons/sio2host/uart"  -O1 -fdata-sections -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+unity/%.o: ../unity/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 4.8.4
 	$(QUOTE)C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAM3X8E__ -DDEBUG -DBOARD=ARDUINO_DUE_X -Dscanf=iscanf -DARM_MATH_CM3=true -Dprintf=iprintf -D__SAM3X8E__  -I"../common/applications/user_application/sam3x8e_arduino_due_x/config" -I"../src/ASF/sam/utils/cmsis/sam3x/include" -I"../src/config" -I"../src/ASF/thirdparty/CMSIS/Lib/GCC" -I"../src/ASF/common/utils" -I"../src" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/gpio" -I"../src/ASF/sam/drivers/pmc" -I"../src/ASF/sam/utils" -I"../src/ASF/sam/utils/preprocessor" -I"../src/ASF/sam/boards" -I"../src/ASF/common/boards" -I"../src/ASF/sam/drivers/pio" -I"../src/ASF/sam/boards/arduino_due_x" -I"../src/ASF/sam/utils/header_files" -I"../src/ASF/sam/utils/cmsis/sam3x/source/templates" -I"../src/ASF/common/services/ioport" -I"../src/ASF/thirdparty/CMSIS/Include" -I"../src/ASF/sam/drivers/uart" -I"../src/ASF/common/services/serial/sam_uart" -I"../src/ASF/common/services/serial" -I"../src/ASF/common/utils/stdio/stdio_serial" -I"../src/ASF/sam/drivers/usart" -I"../src/ASF/thirdparty/wireless/addons/sio2host/uart"  -O1 -fdata-sections -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m3 -c -pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -1,8 +1,8 @@
 /*
- * IncFile1.h
+ * test_digitalIO.h
  *
  * Created: 2015-06-09 14:26:27
- *  Author: staff
+ *  Author: Ulrik
  */ 
 
 
@@ -15,7 +15,15 @@ void resetTest(void);
 
 void test_digitalDuePin13InitialiseProperly(void);
 void test_digitalDuePin13IsSet(void);
+void test_digitalDuePin13IsCleared(void);
 
+void test_digitalDuePin22InitialiseProperly(void);
+void test_digitalDuePin22IsSet(void);
+void test_digitalDuePin22IsCleared(void);
+
+void test_digitalDuePin13And22InitialiseProperly(void);
+void test_digitalDuePin13And22IsSet(void);
+void test_digitalDuePin13isSetAnd22IsCleared(void);
 
 #endif /* INCFILE1_H_ */
 

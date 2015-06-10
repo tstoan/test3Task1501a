@@ -1,29 +1,8 @@
-test/test_digitalIO_runner.d test/test_digitalIO_runner.o: \
- ../test/test_digitalIO_runner.c \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\inttypes.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
+src/ASF/sam/drivers/uart/uart.d src/ASF/sam/drivers/uart/uart.o: \
+ ../src/ASF/sam/drivers/uart/uart.c ../src/ASF/sam/drivers/uart/uart.h \
+ ../src/ASF/sam/utils/compiler.h \
  c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\setjmp.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\newlib.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\setjmp.h \
- ../src/ASF/common/utils/stdio/stdio_serial/stdio_serial.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdarg.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h \
- ../src/ASF/sam/utils/compiler.h ../src/ASF/common/utils/parts.h \
+ ../src/ASF/common/utils/parts.h \
  ../src/ASF/sam/utils/preprocessor/preprocessor.h \
  ../src/ASF/sam/utils/preprocessor/tpaste.h \
  ../src/ASF/sam/utils/preprocessor/stringz.h \
@@ -32,6 +11,10 @@ test/test_digitalIO_runner.d test/test_digitalIO_runner.o: \
  ../src/ASF/sam/utils/header_files/io.h \
  ../src/ASF/sam/utils/cmsis/sam3x/include/sam3xa.h \
  ../src/ASF/sam/utils/cmsis/sam3x/include/sam3x8e.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h \
  ../src/ASF/thirdparty/CMSIS/Include/core_cm3.h \
  ../src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h \
  ../src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h \
@@ -103,86 +86,32 @@ test/test_digitalIO_runner.d test/test_digitalIO_runner.o: \
  ../src/ASF/sam/utils/cmsis/sam3x/include/instance/instance_rtc.h \
  ../src/ASF/sam/utils/cmsis/sam3x/include/instance/instance_gpbr.h \
  ../src/ASF/sam/utils/cmsis/sam3x/include/pio/pio_sam3x8e.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\newlib.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdarg.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h \
+ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h \
  c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdbool.h \
  c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h \
  c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\stdlib.h \
  c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\alloca.h \
  ../src/ASF/common/utils/interrupt.h \
- ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h \
- ../src/ASF/common/services/serial/serial.h \
- ../src/ASF/sam/utils/status_codes.h \
- ../src/ASF/common/services/serial/sam_uart/uart_serial.h \
- ../src/ASF/common/services/clock/sysclk.h ../src/config/conf_clock.h \
- ../src/ASF/common/services/clock/sam3x/sysclk.h \
- ../src/ASF/common/services/clock/osc.h \
- ../src/ASF/common/services/clock/sam3x/osc.h \
- ../src/ASF/common/boards/board.h \
- ../src/ASF/sam/boards/arduino_due_x/arduino_due_x.h \
- ../src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.h \
- ../src/ASF/sam/drivers/pmc/pmc.h ../src/ASF/common/services/clock/pll.h \
- ../src/ASF/common/services/clock/sam3x/pll.h \
- ../src/ASF/sam/drivers/uart/uart.h ../src/ASF/sam/drivers/usart/usart.h \
- ../src/config/conf_uart_serial.h ../src/asf.h \
- ../src/ASF/common/services/gpio/gpio.h \
- ../src/ASF/common/services/gpio/sam_gpio/sam_gpio.h \
- ../src/ASF/sam/drivers/pio/pio.h \
- ../src/ASF/common/services/ioport/ioport.h \
- ../src/ASF/common/services/ioport/sam/ioport_pio.h \
- ../src/ASF/sam/drivers/pmc/sleep.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h ../src/config/conf_board.h \
- ../test/../unity/unity.h ../test/../unity/unity_internals.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include-fixed\limits.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include-fixed\syslimits.h \
- c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\limits.h \
- ../test/../test/test_digitalIO.h
+ ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h
 
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\inttypes.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdint.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\setjmp.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\newlib.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\setjmp.h:
-
-../src/ASF/common/utils/stdio/stdio_serial/stdio_serial.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdio.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdarg.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h:
+../src/ASF/sam/drivers/uart/uart.h:
 
 ../src/ASF/sam/utils/compiler.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h:
 
 ../src/ASF/common/utils/parts.h:
 
@@ -201,6 +130,14 @@ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolch
 ../src/ASF/sam/utils/cmsis/sam3x/include/sam3xa.h:
 
 ../src/ASF/sam/utils/cmsis/sam3x/include/sam3x8e.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdint.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h:
 
 ../src/ASF/thirdparty/CMSIS/Include/core_cm3.h:
 
@@ -344,6 +281,34 @@ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolch
 
 ../src/ASF/sam/utils/cmsis/sam3x/include/pio/pio_sam3x8e.h:
 
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdio.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\newlib.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdarg.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h:
+
+c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h:
+
 c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include\stdbool.h:
 
 c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h:
@@ -355,67 +320,3 @@ c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolch
 ../src/ASF/common/utils/interrupt.h:
 
 ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h:
-
-../src/ASF/common/services/serial/serial.h:
-
-../src/ASF/sam/utils/status_codes.h:
-
-../src/ASF/common/services/serial/sam_uart/uart_serial.h:
-
-../src/ASF/common/services/clock/sysclk.h:
-
-../src/config/conf_clock.h:
-
-../src/ASF/common/services/clock/sam3x/sysclk.h:
-
-../src/ASF/common/services/clock/osc.h:
-
-../src/ASF/common/services/clock/sam3x/osc.h:
-
-../src/ASF/common/boards/board.h:
-
-../src/ASF/sam/boards/arduino_due_x/arduino_due_x.h:
-
-../src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.h:
-
-../src/ASF/sam/drivers/pmc/pmc.h:
-
-../src/ASF/common/services/clock/pll.h:
-
-../src/ASF/common/services/clock/sam3x/pll.h:
-
-../src/ASF/sam/drivers/uart/uart.h:
-
-../src/ASF/sam/drivers/usart/usart.h:
-
-../src/config/conf_uart_serial.h:
-
-../src/asf.h:
-
-../src/ASF/common/services/gpio/gpio.h:
-
-../src/ASF/common/services/gpio/sam_gpio/sam_gpio.h:
-
-../src/ASF/sam/drivers/pio/pio.h:
-
-../src/ASF/common/services/ioport/ioport.h:
-
-../src/ASF/common/services/ioport/sam/ioport_pio.h:
-
-../src/ASF/sam/drivers/pmc/sleep.h:
-
-../src/ASF/sam/drivers/pio/pio_handler.h:
-
-../src/config/conf_board.h:
-
-../test/../unity/unity.h:
-
-../test/../unity/unity_internals.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include-fixed\limits.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.8.4\include-fixed\syslimits.h:
-
-c:\program\ files\atmel\atmel\ toolchain\arm\ gcc\native\4.8.1443\arm-gnu-toolchain\arm-none-eabi\include\limits.h:
-
-../test/../test/test_digitalIO.h:

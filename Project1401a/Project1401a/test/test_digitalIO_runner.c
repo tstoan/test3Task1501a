@@ -20,9 +20,8 @@
 #include <stdio_serial.h>
 #include <asf.h>
 #include "conf_board.h"
-#include "../test/unity.h"	/* Contains declarations of all functions that Unity provides */
+#include "../unity/unity.h"	/* Contains declarations of all functions that Unity provides */
 #include "../test/test_digitalIO.h" /* Contains declarations of the six tests for this exercise */
-
 
 static void configure_console(void)
 /* Enables feedback through the USB-cable back to terminal within Atmel Studio */
@@ -35,17 +34,17 @@ static void configure_console(void)
 	/* Configure console UART. */
 	sysclk_enable_peripheral_clock(CONSOLE_UART_ID);
 	stdio_serial_init(CONF_UART, &uart_serial_options);
+	
+	/* printf("Console ready\n"); */
 }
 
 
 int main(void)
 {
 	/* Insert system clock initialization code here (sysclk_init()). */
+	 sysclk_init();
+	 board_init();
 
-	board_init();
-
-	/* Insert application code here, after the board has been initialized. */
-	
 	/* Initialize the console UART used from within Atmel Studio*/
 	configure_console();
 	
@@ -56,12 +55,16 @@ int main(void)
 	RUN_TEST(test_digitalDuePin13InitialiseProperly, 10);
 	
 	/* Uncomment the rest of the tests, one at a time, when you have written or modified code so that you pass the latest test */
-//	RUN_TEST(test_digitalDuePin13IsSet, 20);
-//	RUN_TEST(test_digitalDuePin13IsCleared, 30);
-//
-//	RUN_TEST(test_digitalDuePin22InitialiseProperly, 40);
-//	RUN_TEST(test_digitalDuePin22IsSet, 50);
-//	RUN_TEST(test_digitalDuePin22IsCleared, 60);
+	RUN_TEST(test_digitalDuePin13IsSet, 15);
+	RUN_TEST(test_digitalDuePin13IsCleared, 18);
+
+	RUN_TEST(test_digitalDuePin22InitialiseProperly, 20);
+	RUN_TEST(test_digitalDuePin22IsSet, 25);
+	RUN_TEST(test_digitalDuePin22IsCleared, 28);
+
+	RUN_TEST(test_digitalDuePin13And22InitialiseProperly, 30);
+	RUN_TEST(test_digitalDuePin13And22IsSet, 35);
+	RUN_TEST(test_digitalDuePin13isSetAnd22IsCleared, 38);
 
 	UnityEnd();
 	

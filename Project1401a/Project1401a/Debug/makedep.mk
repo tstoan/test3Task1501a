@@ -8,6 +8,10 @@ src\ASF\sam\drivers\usart\usart.c
 
 src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.c
 
+src\digitalIO.c
+
+unity\unity.c
+
 src\ASF\common\utils\stdio\write.c
 
 src\ASF\common\services\serial\usart_serial.c
@@ -17,8 +21,6 @@ src\ASF\sam\drivers\uart\uart.c
 test\test_digitalIO.c
 
 test\test_digitalIO_runner.c
-
-test\unity.c
 
 src\ASF\common\services\clock\sam3x\sysclk.c
 
