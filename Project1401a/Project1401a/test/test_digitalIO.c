@@ -53,10 +53,8 @@ void resetTest(void)
 void test_digitalDuePin13InitialiseProperly(void)
 {
 	pinMode(13, OUTPUT);	/* Initialise pin 13 on the Due as an output */
-	TEST_ASSERT_BIT_HIGH(27, *p_PIOB_PSR);	/* Check the status bit that PB27 on port B is properly initialised */
-	TEST_ASSERT_BIT_HIGH(27, *p_PIOB_OSR);	/* Check the status bit that PB27 on port B is an output */
-	
-	/* Note that you need to understand the board pin mapping on http://www.arduino.cc/en/Hacking/PinMappingSAM3X */
+	TEST_ASSERT_BIT_HIGH_MESSAGE(27, *p_PIOB_PSR, "PB27 is not initialised");	/* Check the status bit that PB27 on port B is properly initialised */
+	TEST_ASSERT_BIT_HIGH_MESSAGE(27, *p_PIOB_OSR, "PB27 is not an output");	/* Check the status bit that PB27 on port B is an output */
 }
 
 void test_digitalDuePin13IsSet(void)
@@ -65,12 +63,14 @@ void test_digitalDuePin13IsSet(void)
 	
 	digitalWrite(13, HIGH); /* set pin 13 on the Due to high, lighting up the amber diode */
 	TEST_ASSERT_BIT_HIGH(27, *p_PIOB_ODSR);	/* Check the status bit that PB27 on port B is set */
+	
+	/* Note that you need to understand the board pin mapping on http://www.arduino.cc/en/Hacking/PinMappingSAM3X */
 }
 
 void test_digitalDuePin13IsCleared(void)
 {
-	pinMode(13, OUTPUT);	/* Initialise pin 13 on the Due as an output, proven to work in previous test */
-	digitalWrite(13, HIGH); /* set pin 13 on the Due to high, lighting up the amber diode, proven to work in previous test */
+	pinMode(13, OUTPUT);	/* Initialise pin 13 on the Due as an output, function proven to work in previous test */
+	digitalWrite(13, HIGH); /* set pin 13 on the Due to high, lighting up the amber diode, function proven to work in previous test */
 	digitalWrite(13, LOW);	/* set pin 13 on the Due to low, turning off the amber diode */
 	TEST_ASSERT_BIT_LOW(27, *p_PIOB_ODSR);	/* Check the status bit that PB27 on port B is cleared */
 }
@@ -100,8 +100,8 @@ void test_digitalDuePin13And22InitialiseProperly(void)
 	pinMode(13, OUTPUT);	/* Initialise pin 13 on the Due as an output */
 	pinMode(22, OUTPUT);	/* Initialise pin 22 on the Due as an output */
 	
-	TEST_ASSERT_BIT_HIGH(26, *p_PIOB_OSR);	/* Check the status bit that PB26 on port B is properly initialised */
-	TEST_ASSERT_BIT_HIGH(27, *p_PIOB_OSR);	/* Check the status bit that PB27 on port B is properly initialised */
+	TEST_ASSERT_BIT_HIGH_MESSAGE(26, *p_PIOB_OSR, "PB26 is not an output");	/* Check the status bit that PB26 on port B is properly initialised as an output*/
+	TEST_ASSERT_BIT_HIGH_MESSAGE(27, *p_PIOB_OSR, "PB27 is not an output");	/* Check the status bit that PB27 on port B is properly initialised as an output*/
 }
 
 void test_digitalDuePin13And22IsSet(void)
@@ -111,24 +111,23 @@ void test_digitalDuePin13And22IsSet(void)
 		
 	digitalWrite(13, HIGH); /* set pin 13 on the Due to high, lighting up the amber diode */
 	digitalWrite(22, HIGH); /* set pin 22 on the Due to high */
-	TEST_ASSERT_BIT_HIGH(26, *p_PIOB_ODSR);	/* Check the status bit that PB26 on port B is set */
-	TEST_ASSERT_BIT_HIGH(27, *p_PIOB_ODSR);	/* Check the status bit that PB27 on port B is set */
+	TEST_ASSERT_BIT_HIGH_MESSAGE(26, *p_PIOB_ODSR, "PB26 is not high");	/* Check the status bit that PB26 on port B is set */
+	TEST_ASSERT_BIT_HIGH_MESSAGE(27, *p_PIOB_ODSR, "PB27 is not high");	/* Check the status bit that PB27 on port B is set */
 }
 
-void test_digitalDuePin13isSetAnd22IsCleared(void)
+void test_digitalDuePin13isClearedAnd22IsSet(void)
 {
 	pinMode(13, OUTPUT);	/* Initialise pin 13 on the Due as an output */
 	pinMode(22, OUTPUT);	/* Initialise pin 22 on the Due as an output */
 
+	/* First write opposite values compared to what is going to be tested */
+	digitalWrite(13, HIGH); /* set pin 13 on the Due to high */
+	digitalWrite(22, LOW); /* set pin 22 on the Due to LOW */
+	//TEST_ASSERT_BIT_HIGH(27, *p_PIOB_ODSR);	/* Check the status bit that PB27 on port B is cleared */
+	//TEST_ASSERT_BIT_LOW(26, *p_PIOB_ODSR);	/* Check the status bit that PB26 on port B is set */
+			
 	digitalWrite(13, LOW); /* set pin 13 on the Due to low */
 	digitalWrite(22, HIGH); /* set pin 22 on the Due to high */
-	TEST_ASSERT_BIT_LOW(27, *p_PIOB_ODSR);	/* Check the status bit that PB27 on port B is cleared */
-	TEST_ASSERT_BIT_HIGH(26, *p_PIOB_ODSR);	/* Check the status bit that PB26 on port B is set */
-			
-	digitalWrite(13, HIGH); /* set pin 13 on the Due to high, lighting up the amber diode */
-	digitalWrite(22, LOW); /* set pin 22 on the Due to low */
-	TEST_ASSERT_BIT_HIGH(27, *p_PIOB_ODSR);	/* Check the status bit that PB27 on port B is set */	
-	TEST_ASSERT_BIT_LOW(26, *p_PIOB_ODSR);	/* Check the status bit that PB26 on port B is cleared */
+	TEST_ASSERT_BIT_LOW_MESSAGE(27, *p_PIOB_ODSR, "PB27 is not low");	/* Check the status bit that PB27 on port B is set */	
+	TEST_ASSERT_BIT_HIGH_MESSAGE(26, *p_PIOB_ODSR, "PB26 is not high");	/* Check the status bit that PB26 on port B is cleared */
 }
-
-

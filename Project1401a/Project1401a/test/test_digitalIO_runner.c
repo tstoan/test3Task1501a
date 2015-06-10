@@ -55,16 +55,16 @@ int main(void)
 	RUN_TEST(test_digitalDuePin13InitialiseProperly, 10);
 	
 	/* Uncomment the rest of the tests, one at a time, when you have written or modified code so that you pass the latest test */
-	RUN_TEST(test_digitalDuePin13IsSet, 15);
-	RUN_TEST(test_digitalDuePin13IsCleared, 18);
-
-	RUN_TEST(test_digitalDuePin22InitialiseProperly, 20);
-	RUN_TEST(test_digitalDuePin22IsSet, 25);
-	RUN_TEST(test_digitalDuePin22IsCleared, 28);
-
-	RUN_TEST(test_digitalDuePin13And22InitialiseProperly, 30);
-	RUN_TEST(test_digitalDuePin13And22IsSet, 35);
-	RUN_TEST(test_digitalDuePin13isSetAnd22IsCleared, 38);
+	//RUN_TEST(test_digitalDuePin13IsSet, 15);
+	//RUN_TEST(test_digitalDuePin13IsCleared, 18);
+	//
+	//RUN_TEST(test_digitalDuePin22InitialiseProperly, 20);
+	//RUN_TEST(test_digitalDuePin22IsSet, 25);
+	//RUN_TEST(test_digitalDuePin22IsCleared, 28);
+	//
+	//RUN_TEST(test_digitalDuePin13And22InitialiseProperly, 30);
+	//RUN_TEST(test_digitalDuePin13And22IsSet, 35);
+	//RUN_TEST(test_digitalDuePin13isClearedAnd22IsSet, 38);
 
 	UnityEnd();
 	

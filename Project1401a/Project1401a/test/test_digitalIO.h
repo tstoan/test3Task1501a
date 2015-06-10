@@ -23,7 +23,7 @@ void test_digitalDuePin22IsCleared(void);
 
 void test_digitalDuePin13And22InitialiseProperly(void);
 void test_digitalDuePin13And22IsSet(void);
-void test_digitalDuePin13isSetAnd22IsCleared(void);
+void test_digitalDuePin13isClearedAnd22IsSet(void);
 
 #endif /* INCFILE1_H_ */
 
