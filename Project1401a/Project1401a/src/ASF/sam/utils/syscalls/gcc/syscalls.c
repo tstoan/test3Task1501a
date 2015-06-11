@@ -3,7 +3,7 @@
  *
  * \brief Syscalls for SAM (GCC).
  *
- * Copyright (c) 2011-2012 Atmel Corporation. All rights reserved.
+ * Copyright (c) 2011-2015 Atmel Corporation. All rights reserved.
  *
  * \asf_license_start
  *
@@ -40,6 +40,9 @@
  * \asf_license_stop
  *
  */
+/*
+ * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
+ */
 
 #include <stdio.h>
 #include <stdarg.h>
@@ -57,6 +60,7 @@ extern "C" {
 #undef errno
 extern int errno;
 extern int _end;
+extern int __ram_end__;
 
 extern caddr_t _sbrk(int incr);
 extern int link(char *old, char *new);
@@ -72,11 +76,16 @@ extern caddr_t _sbrk(int incr)
 {
 	static unsigned char *heap = NULL;
 	unsigned char *prev_heap;
+	int ramend = (int)&__ram_end__;
 
 	if (heap == NULL) {
 		heap = (unsigned char *)&_end;
 	}
 	prev_heap = heap;
+
+	if (((int)prev_heap + incr) > ramend) {
+		return (caddr_t) -1;	
+	}
 
 	heap += incr;
 
