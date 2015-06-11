@@ -879,12 +879,249 @@ Discarded input sections
  .debug_macro   0x00000000       0x45 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
  .debug_macro   0x00000000      0x3ca src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
  .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
+ .group         0x00000000        0x8 src/digitalIO.o
  .text          0x00000000        0x0 src/digitalIO.o
  .data          0x00000000        0x0 src/digitalIO.o
  .bss           0x00000000        0x0 src/digitalIO.o
  .text.digitalWrite
                 0x00000000        0x4 src/digitalIO.o
+ .bss.cpu_irq_critical_section_counter
+                0x00000000        0x4 src/digitalIO.o
+ .bss.cpu_irq_prev_interrupt_state
+                0x00000000        0x1 src/digitalIO.o
  .debug_macro   0x00000000      0x874 src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000      0x209 src/digitalIO.o
+ .debug_macro   0x00000000      0x517 src/digitalIO.o
+ .debug_macro   0x00000000       0x76 src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000      0x6e4 src/digitalIO.o
+ .debug_macro   0x00000000       0x3a src/digitalIO.o
+ .debug_macro   0x00000000       0x2d src/digitalIO.o
+ .debug_macro   0x00000000      0xbb1 src/digitalIO.o
+ .debug_macro   0x00000000      0xab6 src/digitalIO.o
+ .debug_macro   0x00000000      0x569 src/digitalIO.o
+ .debug_macro   0x00000000      0x2b5 src/digitalIO.o
+ .debug_macro   0x00000000      0x31a src/digitalIO.o
+ .debug_macro   0x00000000      0x74f src/digitalIO.o
+ .debug_macro   0x00000000       0x82 src/digitalIO.o
+ .debug_macro   0x00000000      0x57b src/digitalIO.o
+ .debug_macro   0x00000000       0x1c src/digitalIO.o
+ .debug_macro   0x00000000      0x6b7 src/digitalIO.o
+ .debug_macro   0x00000000      0x52d src/digitalIO.o
+ .debug_macro   0x00000000       0xbe src/digitalIO.o
+ .debug_macro   0x00000000     0x2342 src/digitalIO.o
+ .debug_macro   0x00000000      0x85d src/digitalIO.o
+ .debug_macro   0x00000000      0xdc9 src/digitalIO.o
+ .debug_macro   0x00000000       0x7c src/digitalIO.o
+ .debug_macro   0x00000000      0x263 src/digitalIO.o
+ .debug_macro   0x00000000       0x58 src/digitalIO.o
+ .debug_macro   0x00000000      0x9a7 src/digitalIO.o
+ .debug_macro   0x00000000      0x248 src/digitalIO.o
+ .debug_macro   0x00000000      0x4df src/digitalIO.o
+ .debug_macro   0x00000000      0x6b3 src/digitalIO.o
+ .debug_macro   0x00000000      0x59f src/digitalIO.o
+ .debug_macro   0x00000000       0x46 src/digitalIO.o
+ .debug_macro   0x00000000      0x34d src/digitalIO.o
+ .debug_macro   0x00000000      0x28c src/digitalIO.o
+ .debug_macro   0x00000000     0x14d7 src/digitalIO.o
+ .debug_macro   0x00000000      0x7ba src/digitalIO.o
+ .debug_macro   0x00000000       0x76 src/digitalIO.o
+ .debug_macro   0x00000000       0x82 src/digitalIO.o
+ .debug_macro   0x00000000       0x76 src/digitalIO.o
+ .debug_macro   0x00000000       0x4c src/digitalIO.o
+ .debug_macro   0x00000000      0x105 src/digitalIO.o
+ .debug_macro   0x00000000      0x105 src/digitalIO.o
+ .debug_macro   0x00000000      0x105 src/digitalIO.o
+ .debug_macro   0x00000000       0x88 src/digitalIO.o
+ .debug_macro   0x00000000       0x88 src/digitalIO.o
+ .debug_macro   0x00000000      0x3b4 src/digitalIO.o
+ .debug_macro   0x00000000       0xb8 src/digitalIO.o
+ .debug_macro   0x00000000       0xb8 src/digitalIO.o
+ .debug_macro   0x00000000       0xb8 src/digitalIO.o
+ .debug_macro   0x00000000       0xb8 src/digitalIO.o
+ .debug_macro   0x00000000      0x2b8 src/digitalIO.o
+ .debug_macro   0x00000000      0x125 src/digitalIO.o
+ .debug_macro   0x00000000      0x225 src/digitalIO.o
+ .debug_macro   0x00000000      0x225 src/digitalIO.o
+ .debug_macro   0x00000000       0x2e src/digitalIO.o
+ .debug_macro   0x00000000       0xac src/digitalIO.o
+ .debug_macro   0x00000000      0x14d src/digitalIO.o
+ .debug_macro   0x00000000       0x7c src/digitalIO.o
+ .debug_macro   0x00000000      0x205 src/digitalIO.o
+ .debug_macro   0x00000000       0x64 src/digitalIO.o
+ .debug_macro   0x00000000       0xa6 src/digitalIO.o
+ .debug_macro   0x00000000       0x7c src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000       0x22 src/digitalIO.o
+ .debug_macro   0x00000000       0x22 src/digitalIO.o
+ .debug_macro   0x00000000      0x115 src/digitalIO.o
+ .debug_macro   0x00000000      0x115 src/digitalIO.o
+ .debug_macro   0x00000000      0x115 src/digitalIO.o
+ .debug_macro   0x00000000      0x115 src/digitalIO.o
+ .debug_macro   0x00000000       0x1c src/digitalIO.o
+ .debug_macro   0x00000000       0x2e src/digitalIO.o
+ .debug_macro   0x00000000       0x22 src/digitalIO.o
+ .debug_macro   0x00000000       0x1c src/digitalIO.o
+ .debug_macro   0x00000000       0x58 src/digitalIO.o
+ .debug_macro   0x00000000       0x10 src/digitalIO.o
+ .debug_macro   0x00000000      0x273 src/digitalIO.o
+ .debug_macro   0x00000000      0xd43 src/digitalIO.o
+ .debug_macro   0x00000000      0x131 src/digitalIO.o
+ .debug_macro   0x00000000       0x58 src/digitalIO.o
+ .debug_macro   0x00000000       0x35 src/digitalIO.o
+ .debug_macro   0x00000000       0xa3 src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000       0x35 src/digitalIO.o
+ .debug_macro   0x00000000       0x10 src/digitalIO.o
+ .debug_macro   0x00000000       0x52 src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000       0x43 src/digitalIO.o
+ .debug_macro   0x00000000      0x180 src/digitalIO.o
+ .debug_macro   0x00000000       0x10 src/digitalIO.o
+ .debug_macro   0x00000000       0x22 src/digitalIO.o
+ .debug_macro   0x00000000       0xbd src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000      0x16c src/digitalIO.o
+ .debug_macro   0x00000000       0x22 src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000       0x16 src/digitalIO.o
+ .debug_macro   0x00000000       0x29 src/digitalIO.o
+ .debug_macro   0x00000000       0x6e src/digitalIO.o
+ .debug_macro   0x00000000       0x45 src/digitalIO.o
+ .debug_macro   0x00000000      0x3ca src/digitalIO.o
+ .debug_macro   0x00000000       0x94 src/digitalIO.o
+ .debug_macro   0x00000000       0x40 src/digitalIO.o
+ .debug_macro   0x00000000      0x25d src/digitalIO.o
+ .debug_macro   0x00000000      0x790 src/digitalIO.o
+ .debug_macro   0x00000000       0x34 src/digitalIO.o
+ .debug_macro   0x00000000       0x5e src/digitalIO.o
+ .debug_macro   0x00000000       0x64 src/digitalIO.o
+ .debug_macro   0x00000000       0x5f src/digitalIO.o
+ .debug_macro   0x00000000       0x90 src/digitalIO.o
+ .debug_macro   0x00000000       0x6a src/digitalIO.o
+ .debug_macro   0x00000000       0x34 src/digitalIO.o
+ .debug_macro   0x00000000       0x1c src/digitalIO.o
+ .debug_macro   0x00000000       0x2e src/digitalIO.o
+ .debug_macro   0x00000000       0x1c src/digitalIO.o
  .group         0x00000000        0x8 unity/unity.o
  .group         0x00000000        0x8 unity/unity.o
  .group         0x00000000        0x8 unity/unity.o
@@ -991,6 +1228,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 unity/unity.o
  .debug_macro   0x00000000       0x35 unity/unity.o
  .debug_macro   0x00000000       0xa3 unity/unity.o
+ .debug_macro   0x00000000       0x4a unity/unity.o
  .debug_macro   0x00000000      0x209 unity/unity.o
  .debug_macro   0x00000000       0x10 unity/unity.o
  .debug_macro   0x00000000       0x52 unity/unity.o
@@ -1839,6 +2077,8 @@ Discarded input sections
  .group         0x00000000        0x8 test/test_digitalIO.o
  .group         0x00000000        0x8 test/test_digitalIO.o
  .group         0x00000000        0x8 test/test_digitalIO.o
+ .group         0x00000000        0x8 test/test_digitalIO.o
+ .group         0x00000000        0x8 test/test_digitalIO.o
  .text          0x00000000        0x0 test/test_digitalIO.o
  .data          0x00000000        0x0 test/test_digitalIO.o
  .bss           0x00000000        0x0 test/test_digitalIO.o
@@ -1885,15 +2125,17 @@ Discarded input sections
  .rodata.p_PIOB_SODR
                 0x00000000        0x4 test/test_digitalIO.o
  .debug_macro   0x00000000      0x874 test/test_digitalIO.o
- .debug_macro   0x00000000      0x166 test/test_digitalIO.o
+ .debug_macro   0x00000000       0x16 test/test_digitalIO.o
+ .debug_macro   0x00000000       0x4a test/test_digitalIO.o
+ .debug_macro   0x00000000      0x209 test/test_digitalIO.o
+ .debug_macro   0x00000000       0x82 test/test_digitalIO.o
+ .debug_macro   0x00000000      0x452 test/test_digitalIO.o
+ .debug_macro   0x00000000       0xf6 test/test_digitalIO.o
  .debug_macro   0x00000000      0x517 test/test_digitalIO.o
  .debug_macro   0x00000000       0x76 test/test_digitalIO.o
  .debug_macro   0x00000000       0x16 test/test_digitalIO.o
  .debug_macro   0x00000000      0x6e4 test/test_digitalIO.o
- .debug_macro   0x00000000       0x16 test/test_digitalIO.o
- .debug_macro   0x00000000       0x44 test/test_digitalIO.o
- .debug_macro   0x00000000      0x209 test/test_digitalIO.o
- .debug_macro   0x00000000       0x20 test/test_digitalIO.o
+ .debug_macro   0x00000000       0x26 test/test_digitalIO.o
  .debug_macro   0x00000000       0x3a test/test_digitalIO.o
  .debug_macro   0x00000000       0x2d test/test_digitalIO.o
  .debug_macro   0x00000000      0xbb1 test/test_digitalIO.o
@@ -2144,6 +2386,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 test/test_digitalIO_runner.o
  .debug_macro   0x00000000       0x4a test/test_digitalIO_runner.o
  .debug_macro   0x00000000      0x209 test/test_digitalIO_runner.o
+ .debug_macro   0x00000000       0x82 test/test_digitalIO_runner.o
+ .debug_macro   0x00000000      0x452 test/test_digitalIO_runner.o
  .debug_macro   0x00000000       0x58 test/test_digitalIO_runner.o
  .debug_macro   0x00000000       0x35 test/test_digitalIO_runner.o
  .debug_macro   0x00000000       0xa3 test/test_digitalIO_runner.o
@@ -2163,6 +2407,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x76 test/test_digitalIO_runner.o
  .debug_macro   0x00000000       0x16 test/test_digitalIO_runner.o
  .debug_macro   0x00000000      0x6e4 test/test_digitalIO_runner.o
+ .debug_macro   0x00000000       0x26 test/test_digitalIO_runner.o
  .debug_macro   0x00000000       0x3a test/test_digitalIO_runner.o
  .debug_macro   0x00000000       0x2d test/test_digitalIO_runner.o
  .debug_macro   0x00000000      0xbb1 test/test_digitalIO_runner.o
@@ -5746,49 +5991,49 @@ OUTPUT(Project1401a.elf elf32-littlearm)
  .comment       0x00000000       0x5c src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
  .comment       0x00000000       0x5c src/ASF/sam/utils/syscalls/gcc/syscalls.o
 
-.debug_info     0x00000000     0xe944
+.debug_info     0x00000000     0xf357
  .debug_info    0x00000000      0x1bb src/ASF/common/utils/stdio/read.o
  .debug_info    0x000001bb     0x1bfa src/ASF/sam/drivers/usart/usart.o
  .debug_info    0x00001db5     0x187d src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
- .debug_info    0x00003632       0xbf src/digitalIO.o
- .debug_info    0x000036f1     0x2b92 unity/unity.o
- .debug_info    0x00006283      0x1c0 src/ASF/common/utils/stdio/write.o
- .debug_info    0x00006443      0x7c5 src/ASF/common/services/serial/usart_serial.o
- .debug_info    0x00006c08      0x889 src/ASF/sam/drivers/uart/uart.o
- .debug_info    0x00007491     0x1093 test/test_digitalIO.o
- .debug_info    0x00008524     0x1309 test/test_digitalIO_runner.o
- .debug_info    0x0000982d      0x796 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_info    0x00009fc3      0x1e8 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_info    0x0000a1ab      0x75c src/ASF/sam/boards/arduino_due_x/init.o
- .debug_info    0x0000a907     0x1385 src/ASF/sam/drivers/pio/pio.o
- .debug_info    0x0000bc8c      0xe52 src/ASF/sam/drivers/pio/pio_handler.o
- .debug_info    0x0000cade     0x1080 src/ASF/sam/drivers/pmc/pmc.o
- .debug_info    0x0000db5e      0x124 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_info    0x0000dc82      0x3bd src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_info    0x0000e03f      0x4c6 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_info    0x0000e505      0x43f src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_info    0x00003632      0xad2 src/digitalIO.o
+ .debug_info    0x00004104     0x2b92 unity/unity.o
+ .debug_info    0x00006c96      0x1c0 src/ASF/common/utils/stdio/write.o
+ .debug_info    0x00006e56      0x7c5 src/ASF/common/services/serial/usart_serial.o
+ .debug_info    0x0000761b      0x889 src/ASF/sam/drivers/uart/uart.o
+ .debug_info    0x00007ea4     0x1093 test/test_digitalIO.o
+ .debug_info    0x00008f37     0x1309 test/test_digitalIO_runner.o
+ .debug_info    0x0000a240      0x796 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_info    0x0000a9d6      0x1e8 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_info    0x0000abbe      0x75c src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_info    0x0000b31a     0x1385 src/ASF/sam/drivers/pio/pio.o
+ .debug_info    0x0000c69f      0xe52 src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_info    0x0000d4f1     0x1080 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_info    0x0000e571      0x124 src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_info    0x0000e695      0x3bd src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_info    0x0000ea52      0x4c6 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_info    0x0000ef18      0x43f src/ASF/sam/utils/syscalls/gcc/syscalls.o
 
-.debug_abbrev   0x00000000     0x25b8
+.debug_abbrev   0x00000000     0x26f7
  .debug_abbrev  0x00000000      0x101 src/ASF/common/utils/stdio/read.o
  .debug_abbrev  0x00000101      0x2dc src/ASF/sam/drivers/usart/usart.o
  .debug_abbrev  0x000003dd      0x3da src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
- .debug_abbrev  0x000007b7       0x88 src/digitalIO.o
- .debug_abbrev  0x0000083f      0x371 unity/unity.o
- .debug_abbrev  0x00000bb0       0xf5 src/ASF/common/utils/stdio/write.o
- .debug_abbrev  0x00000ca5      0x1a8 src/ASF/common/services/serial/usart_serial.o
- .debug_abbrev  0x00000e4d      0x1bd src/ASF/sam/drivers/uart/uart.o
- .debug_abbrev  0x0000100a      0x244 test/test_digitalIO.o
- .debug_abbrev  0x0000124e      0x34a test/test_digitalIO_runner.o
- .debug_abbrev  0x00001598      0x227 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_abbrev  0x000017bf       0xef src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_abbrev  0x000018ae      0x16f src/ASF/sam/boards/arduino_due_x/init.o
- .debug_abbrev  0x00001a1d      0x2d5 src/ASF/sam/drivers/pio/pio.o
- .debug_abbrev  0x00001cf2      0x257 src/ASF/sam/drivers/pio/pio_handler.o
- .debug_abbrev  0x00001f49      0x268 src/ASF/sam/drivers/pmc/pmc.o
- .debug_abbrev  0x000021b1       0x8c src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_abbrev  0x0000223d      0x118 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_abbrev  0x00002355      0x115 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_abbrev  0x0000246a      0x14e src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_abbrev  0x000007b7      0x1c7 src/digitalIO.o
+ .debug_abbrev  0x0000097e      0x371 unity/unity.o
+ .debug_abbrev  0x00000cef       0xf5 src/ASF/common/utils/stdio/write.o
+ .debug_abbrev  0x00000de4      0x1a8 src/ASF/common/services/serial/usart_serial.o
+ .debug_abbrev  0x00000f8c      0x1bd src/ASF/sam/drivers/uart/uart.o
+ .debug_abbrev  0x00001149      0x244 test/test_digitalIO.o
+ .debug_abbrev  0x0000138d      0x34a test/test_digitalIO_runner.o
+ .debug_abbrev  0x000016d7      0x227 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_abbrev  0x000018fe       0xef src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_abbrev  0x000019ed      0x16f src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_abbrev  0x00001b5c      0x2d5 src/ASF/sam/drivers/pio/pio.o
+ .debug_abbrev  0x00001e31      0x257 src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_abbrev  0x00002088      0x268 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_abbrev  0x000022f0       0x8c src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_abbrev  0x0000237c      0x118 src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_abbrev  0x00002494      0x115 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_abbrev  0x000025a9      0x14e src/ASF/sam/utils/syscalls/gcc/syscalls.o
 
 .debug_loc      0x00000000     0x6134
  .debug_loc     0x00000000       0xc5 src/ASF/common/utils/stdio/read.o
@@ -5873,7 +6118,7 @@ OUTPUT(Project1401a.elf elf32-littlearm)
  .debug_ranges  0x00000998       0x20 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
  .debug_ranges  0x000009b8       0x50 src/ASF/sam/utils/syscalls/gcc/syscalls.o
 
-.debug_macro    0x00000000    0x18e87
+.debug_macro    0x00000000    0x1955c
  .debug_macro   0x00000000      0x4a9 src/ASF/common/utils/stdio/read.o
  .debug_macro   0x000004a9      0x874 src/ASF/common/utils/stdio/read.o
  .debug_macro   0x00000d1d      0x166 src/ASF/common/utils/stdio/read.o
@@ -5997,72 +6242,73 @@ OUTPUT(Project1401a.elf elf32-littlearm)
  .debug_macro   0x00012ac2       0x2e src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
  .debug_macro   0x00012af0       0x1c src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
  .debug_macro   0x00012b0c       0x40 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
- .debug_macro   0x00012b4c       0x1b src/digitalIO.o
- .debug_macro   0x00012b67      0x17a unity/unity.o
- .debug_macro   0x00012ce1       0x10 unity/unity.o
- .debug_macro   0x00012cf1       0x4a unity/unity.o
- .debug_macro   0x00012d3b       0x2b unity/unity.o
- .debug_macro   0x00012d66      0x118 unity/unity.o
- .debug_macro   0x00012e7e       0x55 unity/unity.o
- .debug_macro   0x00012ed3       0x1c unity/unity.o
- .debug_macro   0x00012eef       0x97 unity/unity.o
- .debug_macro   0x00012f86       0xef unity/unity.o
- .debug_macro   0x00013075      0x2b2 unity/unity.o
- .debug_macro   0x00013327      0x4a2 unity/unity.o
- .debug_macro   0x000137c9      0x4a9 src/ASF/common/utils/stdio/write.o
- .debug_macro   0x00013c72      0x55c src/ASF/common/services/serial/usart_serial.o
- .debug_macro   0x000141ce      0x4b8 src/ASF/sam/drivers/uart/uart.o
- .debug_macro   0x00014686       0x16 src/ASF/sam/drivers/uart/uart.o
- .debug_macro   0x0001469c      0x645 test/test_digitalIO.o
- .debug_macro   0x00014ce1      0x303 test/test_digitalIO.o
- .debug_macro   0x00014fe4      0x645 test/test_digitalIO_runner.o
- .debug_macro   0x00015629       0x82 test/test_digitalIO_runner.o
- .debug_macro   0x000156ab      0x452 test/test_digitalIO_runner.o
- .debug_macro   0x00015afd       0x7f test/test_digitalIO_runner.o
- .debug_macro   0x00015b7c       0x26 test/test_digitalIO_runner.o
- .debug_macro   0x00015ba2       0x70 test/test_digitalIO_runner.o
- .debug_macro   0x00015c12       0x16 test/test_digitalIO_runner.o
- .debug_macro   0x00015c28      0x529 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_macro   0x00016151      0x257 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_macro   0x000163a8      0x4b3 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_macro   0x0001685b       0x3f src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_macro   0x0001689a      0x568 src/ASF/sam/boards/arduino_due_x/init.o
- .debug_macro   0x00016e02      0x4c4 src/ASF/sam/drivers/pio/pio.o
- .debug_macro   0x000172c6       0x8e src/ASF/sam/drivers/pio/pio.o
- .debug_macro   0x00017354      0x4c8 src/ASF/sam/drivers/pio/pio_handler.o
- .debug_macro   0x0001781c      0x4be src/ASF/sam/drivers/pmc/pmc.o
- .debug_macro   0x00017cda       0x58 src/ASF/sam/drivers/pmc/pmc.o
- .debug_macro   0x00017d32      0x4bd src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_macro   0x000181ef      0x4cb src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_macro   0x000186ba      0x4cb src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_macro   0x00018b85      0x129 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00018cae       0x52 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00018d00       0x16 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00018d16       0x10 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00018d26       0x41 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00018d67      0x120 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00012b4c      0x5e7 src/digitalIO.o
+ .debug_macro   0x00013133       0x4a src/digitalIO.o
+ .debug_macro   0x0001317d       0x82 src/digitalIO.o
+ .debug_macro   0x000131ff      0x452 src/digitalIO.o
+ .debug_macro   0x00013651       0xf6 src/digitalIO.o
+ .debug_macro   0x00013747       0x26 src/digitalIO.o
+ .debug_macro   0x0001376d      0x17a unity/unity.o
+ .debug_macro   0x000138e7       0x10 unity/unity.o
+ .debug_macro   0x000138f7       0x2b unity/unity.o
+ .debug_macro   0x00013922      0x118 unity/unity.o
+ .debug_macro   0x00013a3a       0x55 unity/unity.o
+ .debug_macro   0x00013a8f       0x1c unity/unity.o
+ .debug_macro   0x00013aab       0x97 unity/unity.o
+ .debug_macro   0x00013b42       0xef unity/unity.o
+ .debug_macro   0x00013c31      0x2b2 unity/unity.o
+ .debug_macro   0x00013ee3      0x4a2 unity/unity.o
+ .debug_macro   0x00014385      0x4a9 src/ASF/common/utils/stdio/write.o
+ .debug_macro   0x0001482e      0x55c src/ASF/common/services/serial/usart_serial.o
+ .debug_macro   0x00014d8a      0x4b8 src/ASF/sam/drivers/uart/uart.o
+ .debug_macro   0x00015242       0x16 src/ASF/sam/drivers/uart/uart.o
+ .debug_macro   0x00015258      0x658 test/test_digitalIO.o
+ .debug_macro   0x000158b0      0x303 test/test_digitalIO.o
+ .debug_macro   0x00015bb3      0x645 test/test_digitalIO_runner.o
+ .debug_macro   0x000161f8       0x7f test/test_digitalIO_runner.o
+ .debug_macro   0x00016277       0x70 test/test_digitalIO_runner.o
+ .debug_macro   0x000162e7       0x16 test/test_digitalIO_runner.o
+ .debug_macro   0x000162fd      0x529 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_macro   0x00016826      0x257 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_macro   0x00016a7d      0x4b3 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_macro   0x00016f30       0x3f src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_macro   0x00016f6f      0x568 src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_macro   0x000174d7      0x4c4 src/ASF/sam/drivers/pio/pio.o
+ .debug_macro   0x0001799b       0x8e src/ASF/sam/drivers/pio/pio.o
+ .debug_macro   0x00017a29      0x4c8 src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_macro   0x00017ef1      0x4be src/ASF/sam/drivers/pmc/pmc.o
+ .debug_macro   0x000183af       0x58 src/ASF/sam/drivers/pmc/pmc.o
+ .debug_macro   0x00018407      0x4bd src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_macro   0x000188c4      0x4cb src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_macro   0x00018d8f      0x4cb src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_macro   0x0001925a      0x129 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x00019383       0x52 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x000193d5       0x16 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x000193eb       0x10 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x000193fb       0x41 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0001943c      0x120 src/ASF/sam/utils/syscalls/gcc/syscalls.o
 
-.debug_line     0x00000000     0xecc8
+.debug_line     0x00000000     0xfa90
  .debug_line    0x00000000      0xac1 src/ASF/common/utils/stdio/read.o
  .debug_line    0x00000ac1     0x1192 src/ASF/sam/drivers/usart/usart.o
  .debug_line    0x00001c53      0xfe5 src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
- .debug_line    0x00002c38       0x60 src/digitalIO.o
- .debug_line    0x00002c98      0xa59 unity/unity.o
- .debug_line    0x000036f1      0xab7 src/ASF/common/utils/stdio/write.o
- .debug_line    0x000041a8      0xd03 src/ASF/common/services/serial/usart_serial.o
- .debug_line    0x00004eab      0xc77 src/ASF/sam/drivers/uart/uart.o
- .debug_line    0x00005b22      0xff5 test/test_digitalIO.o
- .debug_line    0x00006b17      0xffb test/test_digitalIO_runner.o
- .debug_line    0x00007b12      0xc30 src/ASF/common/services/clock/sam3x/sysclk.o
- .debug_line    0x00008742      0xadc src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_line    0x0000921e      0xcc7 src/ASF/sam/boards/arduino_due_x/init.o
- .debug_line    0x00009ee5      0xe2a src/ASF/sam/drivers/pio/pio.o
- .debug_line    0x0000ad0f      0xb75 src/ASF/sam/drivers/pio/pio_handler.o
- .debug_line    0x0000b884     0x102d src/ASF/sam/drivers/pmc/pmc.o
- .debug_line    0x0000c8b1      0xa9d src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
- .debug_line    0x0000d34e      0xaed src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
- .debug_line    0x0000de3b      0xb0a src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
- .debug_line    0x0000e945      0x383 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_line    0x00002c38      0xe1a src/digitalIO.o
+ .debug_line    0x00003a52      0xa59 unity/unity.o
+ .debug_line    0x000044ab      0xab7 src/ASF/common/utils/stdio/write.o
+ .debug_line    0x00004f62      0xd03 src/ASF/common/services/serial/usart_serial.o
+ .debug_line    0x00005c65      0xc77 src/ASF/sam/drivers/uart/uart.o
+ .debug_line    0x000068dc     0x1003 test/test_digitalIO.o
+ .debug_line    0x000078df      0xffb test/test_digitalIO_runner.o
+ .debug_line    0x000088da      0xc30 src/ASF/common/services/clock/sam3x/sysclk.o
+ .debug_line    0x0000950a      0xadc src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_line    0x00009fe6      0xcc7 src/ASF/sam/boards/arduino_due_x/init.o
+ .debug_line    0x0000acad      0xe2a src/ASF/sam/drivers/pio/pio.o
+ .debug_line    0x0000bad7      0xb75 src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_line    0x0000c64c     0x102d src/ASF/sam/drivers/pmc/pmc.o
+ .debug_line    0x0000d679      0xa9d src/ASF/sam/utils/cmsis/sam3x/source/templates/exceptions.o
+ .debug_line    0x0000e116      0xaed src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.o
+ .debug_line    0x0000ec03      0xb0a src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.o
+ .debug_line    0x0000f70d      0x383 src/ASF/sam/utils/syscalls/gcc/syscalls.o
 
 .debug_str      0x00000000    0x6bae1
  .debug_str     0x00000000    0x5908b src/ASF/common/utils/stdio/read.o
@@ -6071,19 +6317,19 @@ OUTPUT(Project1401a.elf elf32-littlearm)
                               0x59ffa (size before relaxing)
  .debug_str     0x00059d11     0x512e src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.o
                               0x5e77e (size before relaxing)
- .debug_str     0x0005ee3f       0x64 src/digitalIO.o
-                               0x24d3 (size before relaxing)
- .debug_str     0x0005eea3     0x9dd5 unity/unity.o
+ .debug_str     0x0005ee3f      0xe68 src/digitalIO.o
+                              0x5eaf8 (size before relaxing)
+ .debug_str     0x0005fca7     0x9dd5 unity/unity.o
                                0xf2b5 (size before relaxing)
- .debug_str     0x00068c78       0x26 src/ASF/common/utils/stdio/write.o
+ .debug_str     0x00069a7c       0x26 src/ASF/common/utils/stdio/write.o
                               0x59385 (size before relaxing)
- .debug_str     0x00068c9e       0x64 src/ASF/common/services/serial/usart_serial.o
+ .debug_str     0x00069aa2       0x64 src/ASF/common/services/serial/usart_serial.o
                               0x5d3ab (size before relaxing)
- .debug_str     0x00068d02      0x203 src/ASF/sam/drivers/uart/uart.o
+ .debug_str     0x00069b06      0x203 src/ASF/sam/drivers/uart/uart.o
                               0x59749 (size before relaxing)
- .debug_str     0x00068f05      0x1f1 test/test_digitalIO.o
-                              0x673b9 (size before relaxing)
- .debug_str     0x000690f6      0xe6d test/test_digitalIO_runner.o
+ .debug_str     0x00069d09      0x1d3 test/test_digitalIO.o
+                              0x6819f (size before relaxing)
+ .debug_str     0x00069edc       0x87 test/test_digitalIO_runner.o
                               0x68420 (size before relaxing)
  .debug_str     0x00069f63      0x26a src/ASF/common/services/clock/sam3x/sysclk.o
                               0x5d1a6 (size before relaxing)

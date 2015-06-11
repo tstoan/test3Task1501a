@@ -54,7 +54,7 @@ int main(void)
 	/* Run the tests from the test-file */
 	RUN_TEST(test_digitalDuePin13InitialiseProperly, 10);
 	
-	/* Uncomment the rest of the tests, one at a time, when you have written or modified code so that you pass the latest test */
+	/* Uncomment the rest of the tests, one at a time, when you have written or modified code so that you pass the previous test */
 	//RUN_TEST(test_digitalDuePin13IsSet, 15);
 	//RUN_TEST(test_digitalDuePin13IsCleared, 18);
 	//

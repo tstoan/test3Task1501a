@@ -5,6 +5,7 @@
  *  Author: staff
  */ 
 
+#include <inttypes.h>	/* See http://en.wikipedia.org/wiki/C_data_types#Fixed-width_integer_types for more info */
 #include <asf.h>
 
 #include "../unity/unity.h"
@@ -26,7 +27,7 @@ uint32_t *const p_PIOB_ODR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0014U);	/* define
 uint32_t *const p_PIOB_OSR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0018U);	/* defines the address for status of the parallel output B register */
 uint32_t *const p_PIOB_SODR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0030U);	/* defines the address for setting the output pins of the B register */
 uint32_t *const p_PIOB_CODR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0034U);	/* defines the address for clearing the output pins of the B register  */
-uint32_t *const p_PIOB_ODSR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0038U);	/* defines the address for clearing the output pins of the B register  */
+uint32_t *const p_PIOB_ODSR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0038U);	/* defines the address for status (values) of the output pins of the B register  */
 // uint32_t *const p_PIOB_MDER = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);	/*   */
 // uint32_t *const p_PIOB_MDDR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);	/*   */
 uint32_t *const p_PIOB_OWER = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);	/*   */
