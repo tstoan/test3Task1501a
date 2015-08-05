@@ -15,7 +15,7 @@ void pinMode(int pinNumber, mode_definition mode)
 {
 	if (mode == OUTPUT)	/* You only have to program a function that cares about OUTPUT, and does nothing for the other values */
 	{
-
+		/* Write code here */
 	}
 	else
 	{
@@ -27,11 +27,11 @@ void digitalWrite(int pinNumber, int value)
 {
 	if (value == HIGH)
 	{
-		
+		/* Write code here */
 	}
 	else if (value == LOW)
 	{
-		
+		/* Write code here */		
 	}
 	else
 	{
