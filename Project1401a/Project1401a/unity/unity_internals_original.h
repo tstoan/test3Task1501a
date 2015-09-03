@@ -13,8 +13,6 @@
 
 #include <setjmp.h>
 
-#include "../sam3x8e/uart.h"		// modified by Mathias Beckius 2014-09-07
-
 // Unity Attempts to Auto-Detect Integer Types
 // Attempt 1: UINT_MAX, ULONG_MAX, etc in <stdint.h>
 // Attempt 2: UINT_MAX, ULONG_MAX, etc in <limits.h>
@@ -263,15 +261,9 @@ typedef UNITY_DOUBLE_TYPE _UD;
 // Output Method: stdout (DEFAULT)
 //-------------------------------------------------------
 #ifndef UNITY_OUTPUT_CHAR
-/*
- * Originally this macro function was using 'putchar()',
- * which is defined in stdio.h
- * Modified by Mathias Beckius 2014-09-28
- */
-#define UNITY_OUTPUT_CHAR(a) {	\
-	while (!uart_tx_ready());	\
-	uart_write_char(a);			\
-}
+//Default to using putchar, which is defined in stdio.h
+#include <stdio.h>
+#define UNITY_OUTPUT_CHAR(a) putchar(a)
 #else
 //If defined as something else, make sure we declare it here so it's ready for use
 extern int UNITY_OUTPUT_CHAR(int);
