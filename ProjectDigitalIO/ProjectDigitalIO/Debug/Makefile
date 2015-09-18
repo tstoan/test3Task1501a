@@ -102,7 +102,7 @@ C_SRCS +=  \
 ../src/ASF/common/services/serial/usart_serial.c \
 ../src/ASF/sam/drivers/uart/uart.c \
 ../test/test_digitalIO.c \
-../test/test_digitalIO_runner.c \
+../test/main.c \
 ../src/ASF/common/services/clock/sam3x/sysclk.c \
 ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.c \
 ../src/ASF/sam/boards/arduino_due_x/init.c \
@@ -132,7 +132,7 @@ src/ASF/common/utils/stdio/write.o \
 src/ASF/common/services/serial/usart_serial.o \
 src/ASF/sam/drivers/uart/uart.o \
 test/test_digitalIO.o \
-test/test_digitalIO_runner.o \
+test/main.o \
 src/ASF/common/services/clock/sam3x/sysclk.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
 src/ASF/sam/boards/arduino_due_x/init.o \
@@ -155,7 +155,7 @@ src/ASF/common/utils/stdio/write.o \
 src/ASF/common/services/serial/usart_serial.o \
 src/ASF/sam/drivers/uart/uart.o \
 test/test_digitalIO.o \
-test/test_digitalIO_runner.o \
+test/main.o \
 src/ASF/common/services/clock/sam3x/sysclk.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
 src/ASF/sam/boards/arduino_due_x/init.o \
@@ -178,7 +178,7 @@ src/ASF/common/utils/stdio/write.d \
 src/ASF/common/services/serial/usart_serial.d \
 src/ASF/sam/drivers/uart/uart.d \
 test/test_digitalIO.d \
-test/test_digitalIO_runner.d \
+test/main.d \
 src/ASF/common/services/clock/sam3x/sysclk.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
 src/ASF/sam/boards/arduino_due_x/init.d \
@@ -201,7 +201,7 @@ src/ASF/common/utils/stdio/write.d \
 src/ASF/common/services/serial/usart_serial.d \
 src/ASF/sam/drivers/uart/uart.d \
 test/test_digitalIO.d \
-test/test_digitalIO_runner.d \
+test/main.d \
 src/ASF/common/services/clock/sam3x/sysclk.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
 src/ASF/sam/boards/arduino_due_x/init.d \
@@ -214,9 +214,9 @@ src/ASF/sam/utils/cmsis/sam3x/source/templates/gcc/startup_sam3x.d \
 src/ASF/sam/utils/cmsis/sam3x/source/templates/system_sam3x.d \
 src/ASF/sam/utils/syscalls/gcc/syscalls.d
 
-OUTPUT_FILE_PATH +=Project1501a.elf
+OUTPUT_FILE_PATH +=ProjectDigitalIO.elf
 
-OUTPUT_FILE_PATH_AS_ARGS +=Project1501a.elf
+OUTPUT_FILE_PATH_AS_ARGS +=ProjectDigitalIO.elf
 
 ADDITIONAL_DEPENDENCIES:=
 
@@ -409,14 +409,14 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP) $(LINKER_SCRIPT_DEP)
 	@echo Building target: $@
 	@echo Invoking: ARM/GNU Linker : 4.8.4
-	$(QUOTE)C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mthumb -Wl,-Map="Project1501a.map" -Wl,--start-group -larm_cortexM3l_math -lm  -Wl,--end-group -L"../cmsis/linkerScripts" -L"../src/ASF/thirdparty/CMSIS/Lib/GCC"  -Wl,--gc-sections -mcpu=cortex-m3 -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam/utils/linker_scripts/sam3x/sam3x8/gcc/flash.ld  
+	$(QUOTE)C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mthumb -Wl,-Map="ProjectDigitalIO.map" -Wl,--start-group -larm_cortexM3l_math -lm  -Wl,--end-group -L"../cmsis/linkerScripts" -L"../src/ASF/thirdparty/CMSIS/Lib/GCC"  -Wl,--gc-sections -mcpu=cortex-m3 -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/sam/utils/linker_scripts/sam3x/sam3x8/gcc/flash.ld  
 	@echo Finished building target: $@
-	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O binary "Project1501a.elf" "Project1501a.bin"
-	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "Project1501a.elf" "Project1501a.hex"
-	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -j .eeprom --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0 --no-change-warnings -O binary "Project1501a.elf" "Project1501a.eep" || exit 0
-	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objdump.exe" -h -S "Project1501a.elf" > "Project1501a.lss"
-	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature  "Project1501a.elf" "Project1501a.srec"
-	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-size.exe" "Project1501a.elf"
+	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O binary "ProjectDigitalIO.elf" "ProjectDigitalIO.bin"
+	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "ProjectDigitalIO.elf" "ProjectDigitalIO.hex"
+	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -j .eeprom --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0 --no-change-warnings -O binary "ProjectDigitalIO.elf" "ProjectDigitalIO.eep" || exit 0
+	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objdump.exe" -h -S "ProjectDigitalIO.elf" > "ProjectDigitalIO.lss"
+	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature  "ProjectDigitalIO.elf" "ProjectDigitalIO.srec"
+	"C:\Program Files\Atmel\Atmel Toolchain\ARM GCC\Native\4.8.1443\arm-gnu-toolchain\bin\arm-none-eabi-size.exe" "ProjectDigitalIO.elf"
 	
 	
 
@@ -428,5 +428,5 @@ $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP) $(LINKER
 clean:
 	-$(RM) $(OBJS_AS_ARGS) $(EXECUTABLES)  
 	-$(RM) $(C_DEPS_AS_ARGS)   
-	rm -rf "Project1501a.elf" "Project1501a.a" "Project1501a.hex" "Project1501a.bin" "Project1501a.lss" "Project1501a.eep" "Project1501a.map" "Project1501a.srec"
+	rm -rf "ProjectDigitalIO.elf" "ProjectDigitalIO.a" "ProjectDigitalIO.hex" "ProjectDigitalIO.bin" "ProjectDigitalIO.lss" "ProjectDigitalIO.eep" "ProjectDigitalIO.map" "ProjectDigitalIO.srec"
 	

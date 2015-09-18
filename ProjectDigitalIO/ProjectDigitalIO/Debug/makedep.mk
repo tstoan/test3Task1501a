@@ -20,7 +20,7 @@ src\ASF\sam\drivers\uart\uart.c
 
 test\test_digitalIO.c
 
-test\test_digitalIO_runner.c
+test\main.c
 
 src\ASF\common\services\clock\sam3x\sysclk.c
 
