@@ -6,8 +6,8 @@
  */ 
 
 
-#ifndef INCFILE1_H_
-#define INCFILE1_H_
+#ifndef TEST_DIGITALIO_H_
+#define TEST_DIGITALIO_H_
 
 void setUp(void);
 void tearDown(void);
@@ -25,5 +25,5 @@ void test_digitalDuePin13And22InitialiseProperly(void);
 void test_digitalDuePin13And22IsSet(void);
 void test_digitalDuePin13isClearedAnd22IsSet(void);
 
-#endif /* INCFILE1_H_ */
+#endif /* TEST_DIGITALIO_H_ */
 

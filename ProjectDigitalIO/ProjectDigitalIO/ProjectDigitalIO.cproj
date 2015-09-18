@@ -13,7 +13,7 @@
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
     <AssemblyName>Project1401a</AssemblyName>
-    <Name>Project1501a</Name>
+    <Name>ProjectDigitalIO</Name>
     <RootNamespace>Project1401a</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
@@ -538,7 +538,7 @@
     <Compile Include="test\test_digitalIO.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="test\test_digitalIO_runner.c">
+    <Compile Include="test\main.c">
       <SubType>compile</SubType>
     </Compile>
     <None Include="src\asf.h">

@@ -28,12 +28,7 @@ uint32_t *const p_PIOB_OSR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0018U);	/* define
 uint32_t *const p_PIOB_SODR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0030U);	/* defines the address for setting the output pins of the B register */
 uint32_t *const p_PIOB_CODR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0034U);	/* defines the address for clearing the output pins of the B register  */
 uint32_t *const p_PIOB_ODSR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0038U);	/* defines the address for status (values) of the output pins of the B register  */
-// uint32_t *const p_PIOB_MDER = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);	/*   */
-// uint32_t *const p_PIOB_MDDR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);	/*   */
 uint32_t *const p_PIOB_OWER = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);	/*   */
-// uint32_t *const p_PIOB_OWDR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);	/*   */
-// uint32_t *const p_PIOB_ABSR = (uint32_t *) (PIOB_BASE_ADDRESS+0x0010U);
-
 
 void setUp(void)
 {
