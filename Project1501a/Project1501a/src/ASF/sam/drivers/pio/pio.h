@@ -3,7 +3,7 @@
  *
  * \brief Parallel Input/Output (PIO) Controller driver for SAM.
  *
- * Copyright (c) 2011 - 2013 Atmel Corporation. All rights reserved.
+ * Copyright (c) 2011-2015 Atmel Corporation. All rights reserved.
  *
  * \asf_license_start
  *
@@ -39,6 +39,9 @@
  *
  * \asf_license_stop
  *
+ */
+/*
+ * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
 #ifndef PIO_H_INCLUDED
@@ -78,7 +81,7 @@ typedef enum _pio_type {
 	PIO_NOT_A_PIN   = PIO_TYPE_NOT_A_PIN,
 	PIO_PERIPH_A    = PIO_TYPE_PIO_PERIPH_A,
 	PIO_PERIPH_B    = PIO_TYPE_PIO_PERIPH_B,
-#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N)
+#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N || SAM4C || SAM4CP || SAM4CM)
 	PIO_PERIPH_C    = PIO_TYPE_PIO_PERIPH_C,
 	PIO_PERIPH_D    = PIO_TYPE_PIO_PERIPH_D,
 #endif
@@ -152,7 +155,7 @@ void pio_set_multi_driver(Pio *p_pio, const uint32_t ul_mask,
 		const uint32_t ul_multi_driver_enable);
 uint32_t pio_get_multi_driver_status(const Pio *p_pio);
 
-#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N)
+#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N || SAM4C || SAMG || SAM4CP || SAM4CM)
 void pio_pull_down(Pio *p_pio, const uint32_t ul_mask,
 		const uint32_t ul_pull_down_enable);
 #endif
@@ -162,12 +165,12 @@ void pio_disable_output_write(Pio *p_pio, const uint32_t ul_mask);
 uint32_t pio_get_output_write_status(const Pio *p_pio);
 void pio_sync_output_write(Pio *p_pio, const uint32_t ul_mask);
 
-#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N)
+#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N || SAM4C || SAMG || SAM4CP || SAM4CM)
 void pio_set_schmitt_trigger(Pio *p_pio, const uint32_t ul_mask);
 uint32_t pio_get_schmitt_trigger(const Pio *p_pio);
 #endif
 
-void pio_configure_interrupt(Pio *p_pio, const uint32_t ul_mask, 
+void pio_configure_interrupt(Pio *p_pio, const uint32_t ul_mask,
 		const uint32_t ul_attr);
 void pio_enable_interrupt(Pio *p_pio, const uint32_t ul_mask);
 void pio_disable_interrupt(Pio *p_pio, const uint32_t ul_mask);
@@ -204,8 +207,17 @@ uint32_t pio_configure_pin(uint32_t ul_pin, const uint32_t ul_flags);
 void pio_set_pin_group_high(Pio *p_pio, uint32_t ul_mask);
 void pio_set_pin_group_low(Pio *p_pio, uint32_t ul_mask);
 void pio_toggle_pin_group(Pio *p_pio, uint32_t ul_mask);
-uint32_t pio_configure_pin_group(Pio *p_pio, uint32_t ul_mask, 
+uint32_t pio_configure_pin_group(Pio *p_pio, uint32_t ul_mask,
 		const uint32_t ul_flags);
+
+#if (SAM4C || SAM4CP || SAM4CM || SAMG55)
+enum pio_io_drive_mode {
+	PIO_IO_DRIVE_LOW = 0,
+	PIO_IO_DRIVE_HIGH,
+};
+void pio_set_io_drive(Pio *p_pio, uint32_t ul_line,
+		enum pio_io_drive_mode mode);
+#endif
 
 /**
  * \page sam_pio_quickstart Quick Start Guide for the SAM PIO driver
@@ -232,11 +244,11 @@ uint32_t pio_configure_pin_group(Pio *p_pio, uint32_t ul_mask,
  * \subsection sam_pio_quickstart_use_case_1_setup_steps Initialization code
  * Add to the application initialization code:
  * \code
- *    pmc_enable_periph_clk(ID_PIOA);
- *
- *    pio_set_output(PIOA, PIO_PA23, LOW, DISABLE, ENABLE);
- *    pio_set_input(PIOA, PIO_PA16, PIO_PULLUP);
- * \endcode
+	    pmc_enable_periph_clk(ID_PIOA);
+
+	    pio_set_output(PIOA, PIO_PA23, LOW, DISABLE, ENABLE);
+	    pio_set_input(PIOA, PIO_PA16, PIO_PULLUP);
+\endcode
  *
  * \subsection sam_pio_quickstart_use_case_1_setup_steps_workflow Workflow
  * -# Enable the module clock to the PIOA peripheral:
@@ -249,23 +261,23 @@ uint32_t pio_configure_pin_group(Pio *p_pio, uint32_t ul_mask,
  * \subsection sam_pio_quickstart_use_case_1_example_code Example code
  *   Set the state of output pin 23 to match input pin 16:
  *   \code
- *   if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
- *       pio_clear(PIOA, PIO_PA23);
- *   else
- *       pio_set(PIOA, PIO_PA23);
- *   \endcode
+	if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
+	    pio_clear(PIOA, PIO_PA23);
+	else
+	    pio_set(PIOA, PIO_PA23);
+\endcode
  *
  * \subsection sam_pio_quickstart_use_case_1_example_workflow Workflow
  * -# We check the value of the pin:
  *     \code
- *     if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
- *     \endcode
+	if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
+\endcode
  * -# Then we set the new output value based on the read pin value:
  *     \code
- *         pio_clear(PIOA, PIO_PA23);
- *     else
- *         pio_set(PIOA, PIO_PA23);
- *     \endcode
+	    pio_clear(PIOA, PIO_PA23);
+	else
+	    pio_set(PIOA, PIO_PA23);
+\endcode
  */
 
 /**
@@ -283,16 +295,16 @@ uint32_t pio_configure_pin_group(Pio *p_pio, uint32_t ul_mask,
  * \subsection sam_pio_quickstart_use_case_2_setup_steps Initialization code
  * Add to the application initialization code:
  * \code
- * pmc_enable_periph_clk(ID_PIOA);
- *
- * pio_set_output(PIOA, PIO_PA23, LOW, DISABLE, ENABLE);
- * pio_set_input(PIOA, PIO_PA16, PIO_PULLUP);
- *
- * pio_handler_set(PIOA, ID_PIOA, PIO_PA16, PIO_IT_EDGE, pin_edge_handler);
- * pio_enable_interrupt(PIOA, PIO_PA16);
- *
- * NVIC_EnableIRQ(PIOA_IRQn);
- * \endcode
+	 pmc_enable_periph_clk(ID_PIOA);
+
+	 pio_set_output(PIOA, PIO_PA23, LOW, DISABLE, ENABLE);
+	 pio_set_input(PIOA, PIO_PA16, PIO_PULLUP);
+
+	 pio_handler_set(PIOA, ID_PIOA, PIO_PA16, PIO_IT_EDGE, pin_edge_handler);
+	 pio_enable_interrupt(PIOA, PIO_PA16);
+
+	 NVIC_EnableIRQ(PIOA_IRQn);
+\endcode
  *
  * \subsection sam_pio_quickstart_use_case_2_setup_steps_workflow Workflow
  * -# Enable the module clock to the PIOA peripheral:
@@ -311,26 +323,28 @@ uint32_t pio_configure_pin_group(Pio *p_pio, uint32_t ul_mask,
  * \subsection sam_pio_quickstart_use_case_2_example_code Example code
  * Add the following function to your application:
  * \code
- *    void pin_edge_handler(void)
- *    {
- *        if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
- *            pio_clear(PIOA, PIO_PA23);
- *        else
- *            pio_set(PIOA, PIO_PA23);
- *    }
- * \endcode
+	void pin_edge_handler(const uint32_t id, const uint32_t index)
+	{
+		if ((id == ID_PIOA) && (index == PIO_PA16)){
+			if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
+				pio_clear(PIOA, PIO_PA23);
+			else
+				pio_set(PIOA, PIO_PA23);
+		}
+	}
+\endcode
  *
  * \subsection sam_pio_quickstart_use_case_2_example_workflow Workflow
  * -# We check the value of the pin:
  *     \code
- *     if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
- *     \endcode
+	if (pio_get(PIOA, PIO_TYPE_PIO_INPUT, PIO_PA16))
+\endcode
  * -# Then we set the new output value based on the read pin value:
  *     \code
- *         pio_clear(PIOA, PIO_PA23);
- *     else
- *         pio_set(PIOA, PIO_PA23);
- *     \endcode
+	    pio_clear(PIOA, PIO_PA23);
+	else
+	    pio_set(PIOA, PIO_PA23);
+\endcode
  */
 
 #ifdef __cplusplus

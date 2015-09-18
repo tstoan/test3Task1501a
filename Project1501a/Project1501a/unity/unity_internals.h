@@ -13,8 +13,6 @@
 
 #include <setjmp.h>
 
-#include "../sam3x8e/uart.h"		// modified by Mathias Beckius 2014-09-07
-
 // Unity Attempts to Auto-Detect Integer Types
 // Attempt 1: UINT_MAX, ULONG_MAX, etc in <stdint.h>
 // Attempt 2: UINT_MAX, ULONG_MAX, etc in <limits.h>
@@ -84,22 +82,22 @@
 // UNITY_INT_WIDTH.
 #ifndef UNITY_POINTER_WIDTH
   #ifdef UINTPTR_MAX
-    #if (UINTPTR_MAX+0 <= 0xFFFF)
+    #if (UINTPTR_MAX <= 0xFFFF)
       #define UNITY_POINTER_WIDTH (16)
-    #elif (UINTPTR_MAX+0 <= 0xFFFFFFFF)
+    #elif (UINTPTR_MAX <= 0xFFFFFFFF)
       #define UNITY_POINTER_WIDTH (32)
-    #elif (UINTPTR_MAX+0 <= 0xFFFFFFFFFFFFFFFF)
+    #elif (UINTPTR_MAX <= 0xFFFFFFFFFFFFFFFF)
       #define UNITY_POINTER_WIDTH (64)
     #endif
   #endif
 #endif
 #ifndef UNITY_POINTER_WIDTH
   #ifdef INTPTR_MAX
-    #if (INTPTR_MAX+0 <= 0x7FFF)
+    #if (INTPTR_MAX <= 0x7FFF)
       #define UNITY_POINTER_WIDTH (16)
-    #elif (INTPTR_MAX+0 <= 0x7FFFFFFF)
+    #elif (INTPTR_MAX <= 0x7FFFFFFF)
       #define UNITY_POINTER_WIDTH (32)
-    #elif (INTPTR_MAX+0 <= 0x7FFFFFFFFFFFFFFF)
+    #elif (INTPTR_MAX <= 0x7FFFFFFFFFFFFFFF)
       #define UNITY_POINTER_WIDTH (64)
     #endif
   #endif
@@ -263,15 +261,9 @@ typedef UNITY_DOUBLE_TYPE _UD;
 // Output Method: stdout (DEFAULT)
 //-------------------------------------------------------
 #ifndef UNITY_OUTPUT_CHAR
-/*
- * Originally this macro function was using 'putchar()',
- * which is defined in stdio.h
- * Modified by Mathias Beckius 2014-09-28
- */
-#define UNITY_OUTPUT_CHAR(a) {	\
-	while (!uart_tx_ready());	\
-	uart_write_char(a);			\
-}
+//Default to using putchar, which is defined in stdio.h
+#include <stdio.h>
+#define UNITY_OUTPUT_CHAR(a) putchar(a)
 #else
 //If defined as something else, make sure we declare it here so it's ready for use
 extern int UNITY_OUTPUT_CHAR(int);
@@ -448,12 +440,6 @@ void UnityAssertEqualString(const char* expected,
                             const char* msg,
                             const UNITY_LINE_TYPE lineNumber);
 
-void UnityAssertEqualStringLen(const char* expected,
-                            const char* actual,
-                            const _UU32 length,
-                            const char* msg,
-                            const UNITY_LINE_TYPE lineNumber);
-
 void UnityAssertEqualStringArray( const char** expected,
                                   const char** actual,
                                   const _UU32 num_elements,
@@ -569,8 +555,6 @@ extern const char UnityStrErr64[];
 #define UNITY_END() UnityEnd()
 #endif
 
-#define UNITY_UNUSED(x) (void)(sizeof(x))
-
 //-------------------------------------------------------
 // Basic Fail and Ignore
 //-------------------------------------------------------
@@ -613,7 +597,6 @@ extern const char UnityStrErr64[];
 
 #define UNITY_TEST_ASSERT_EQUAL_PTR(expected, actual, line, message)                             UnityAssertEqualNumber((_U_SINT)(_UP)(expected), (_U_SINT)(_UP)(actual), (message), (UNITY_LINE_TYPE)line, UNITY_DISPLAY_STYLE_POINTER)
 #define UNITY_TEST_ASSERT_EQUAL_STRING(expected, actual, line, message)                          UnityAssertEqualString((const char*)(expected), (const char*)(actual), (message), (UNITY_LINE_TYPE)line)
-#define UNITY_TEST_ASSERT_EQUAL_STRING_LEN(expected, actual, len, line, message)                 UnityAssertEqualStringLen((const char*)(expected), (const char*)(actual), (_UU32)(len), (message), (UNITY_LINE_TYPE)line)
 #define UNITY_TEST_ASSERT_EQUAL_MEMORY(expected, actual, len, line, message)                     UnityAssertEqualMemory((UNITY_PTR_ATTRIBUTE void*)(expected), (UNITY_PTR_ATTRIBUTE void*)(actual), (_UU32)(len), 1, (message), (UNITY_LINE_TYPE)line)
 
 #define UNITY_TEST_ASSERT_EQUAL_INT_ARRAY(expected, actual, num_elements, line, message)         UnityAssertEqualIntArray((UNITY_PTR_ATTRIBUTE const void*)(expected), (UNITY_PTR_ATTRIBUTE const void*)(actual), (_UU32)(num_elements), (message), (UNITY_LINE_TYPE)line, UNITY_DISPLAY_STYLE_INT)

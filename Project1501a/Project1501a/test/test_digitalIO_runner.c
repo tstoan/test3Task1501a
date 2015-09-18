@@ -1,18 +1,17 @@
 /**
  * /file testDigitalIO_runner.c
  * /author Ulrik Eklund
- * /date 2015-09-03
+ * /date 2015-06-09
  * /brief Test runner program for test of the digital outputs on an Arduino Due board.
  *
  * This project provides a basic set of tests for functions controlling the digital outputs on
  * Arduino Due board, using Unity as the test framework (https://github.com/ThrowTheSwitch/Unity).
  * 
- * This file is the main() function that calls all the relevant tests, which in turn calls the 
+ * This file is the main() function tha calls all the relvant tests, which in turn calls the 
  * functions to be developed.
  *
- * This program does not rely on the hardware API (ASF) provided by Atmel, but instead uses
- * the student developed library for SAM3X8E and a modified unity_internals.h to print the
- * test results on the terminal via UART over USB.
+ * This program does not rely on the hardware API (ASF) provided by Atmel for the I/O drivers,
+ * but it relies on ASF Atmel Software Framework (ASF) for communication to the terminal via USB.
  */
 
 #include <inttypes.h>	/* See http://en.wikipedia.org/wiki/C_data_types#Fixed-width_integer_types for more info */
@@ -42,28 +41,12 @@ static void configure_console(void)
 
 int main(void)
 {
-	/*
-	* Set Flash Wait State, by defining the number of cycles
-	* for read and write operations: FWS + 1
-	*/
-	eefc_set_flash_wait_state(EEFC0, 4);
-	eefc_set_flash_wait_state(EEFC1, 4);
+	/* Insert system clock initialization code here (sysclk_init()). */
+	 sysclk_init();
+	 board_init();
 
-	/* initialize system clock, otherwise nothing useful runs */
-	pmc_init_system_clock();
-
-	/* disable the watchdog timer so the procoessor does not reset when the timer overflows */
-	wdt_disable();
-	
-	/* Define the settings for printing the output from Unity to the terminal used,
-	   note that the settings must be the same in the terminal window in Atmel studio */
-	uart_settings_t uart_settings = {
-		.baud_rate = 115200,
-		.parity = UART_PARITY_NO,
-		.ch_mode = UART_CHMODE_LOCAL_LOOPBACK
-	};
-	/* Initialize the console UART */
-	uart_init(&uart_settings);
+	/* Initialize the console UART used from within Atmel Studio*/
+	configure_console();
 	
 	/* From here on the program uses the Unity testing framework */
 	UnityBegin("../test/testDigitalIO.c");

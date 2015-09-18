@@ -3,7 +3,7 @@
  *
  * \brief Global interrupt management for SAM D20, SAM3 and SAM4 (NVIC based)
  *
- * Copyright (c) 2012-2013 Atmel Corporation. All rights reserved.
+ * Copyright (c) 2012-2015 Atmel Corporation. All rights reserved.
  *
  * \asf_license_start
  *
@@ -40,12 +40,19 @@
  * \asf_license_stop
  *
  */
+/*
+ * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
+ */
 
 #ifndef UTILS_INTERRUPT_INTERRUPT_H
 #define UTILS_INTERRUPT_INTERRUPT_H
 
 #include <compiler.h>
 #include <parts.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /**
  * \weakgroup interrupt_group
@@ -68,12 +75,12 @@
  *
  * Usage:
  * \code
- * ISR(foo_irq_handler)
- * {
- *      // Function definition
- *      ...
- * }
- * \endcode
+	ISR(foo_irq_handler)
+	{
+	     // Function definition
+	     ...
+	}
+\endcode
  *
  * \param func Name for the function.
  */
@@ -102,9 +109,9 @@
  *
  * Usage:
  * \code
- * irq_initialize_vectors();
- * irq_register_handler(foo_irq_handler);
- * \endcode
+	irq_initialize_vectors();
+	irq_register_handler(foo_irq_handler);
+\endcode
  *
  * \note The function \a func must be defined with the \ref ISR macro.
  * \note The functions prototypes can be found in the device exception header
@@ -174,5 +181,9 @@ void cpu_irq_leave_critical(void);
 //@}
 
 //@}
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* UTILS_INTERRUPT_INTERRUPT_H */
