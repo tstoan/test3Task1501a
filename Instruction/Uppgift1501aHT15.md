@@ -23,7 +23,7 @@ Grunderna hur man arbetar med git-klienten för Windows finns på<https://help.
 Välj en katalog på datorn där du vill ha din lokala kopia av repot.  
 Klona repot på github repo till din valda katalog på datorn med hjälp av github-bash.  Adressen du ska använda finns under HTTPS clone URL. Kommandoraden blir i Unix eller gitbash om man står i önskad katalog:
     
-    >git clone https://github.com/StudentNN/Task1401f.gitdär `StudentNN` är ditt användarnamn på github.
+        >git clone https://github.com/StudentNN/Task1401f.gitdär `StudentNN` är ditt användarnamn på github.
 
 ![Figur 2: Adressen till ett kodreps på githubs webbsida.](cloneAddress.png)
 
