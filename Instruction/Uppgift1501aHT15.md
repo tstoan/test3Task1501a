@@ -144,7 +144,17 @@ I den här labben är några av stegen redan givna för alla testerna. I detalj 
 
 #### Förberedelse
 
-1. Gör på en testlista (redan gjort för den här labben!)
+1. Gör på en testlista. Det är redan gjort för den här labben och ser ut som följer:
+    1. Port B utgång 27 initialiserad som en digital utgång = pin 13 på Due-kortet = lysdioden
+    2. Sätt pin 13 till hög
+    3. Pin 13 till låg
+    4. Pin 22 initialiserad som digital utgång (Due pinne 22)
+    5. Pin 22 till hög
+    6. Pin 22 till låg
+    7. Pin 13 och pin 22 initialiseras som utgångar
+    8. Pin 13 och pin 22 båda till höga
+    9. Pin 13 och pin 22 båda till låg
+
 2. Skapa en .c–fil och en .h-fil med funktionerna som skall testas, detta är modulen som skall testas (också redan gjort: `digitalIO.h` och `digitalIO.c`)
 
 #### Testcykeln
