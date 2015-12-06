@@ -14,13 +14,13 @@ REM *
 REM * 2. Configure an 'External Tool' in Atmel Studio 6 (Tools -> External Tools...).
 REM *
 REM * 2.1 Configure a debug build command
-REM *     Titel: BossacArduinoDue(Debug)
+REM *     Titel: Arduino Due (Debug)
 REM *     Command: C:\Program Files (x86)\Atmel\Atmel Studio 6.0\BossacArduinoDue.bat
 REM *     Arguments: "C:\Program Files (x86)\arduino-1.5.2\hardware\tools\bossac.exe" "$(ProjectDir)\Debug\$(ProjectFileName).bin"
 REM *     Checkbox "Use Output Window".
 REM *
 REM * 2.2. Configure a release build command
-REM *      Titel: BossacArduinoDue(Release)
+REM *      Titel: Arduino Due (Release)
 REM *      Command: C:\Program Files (x86)\Atmel\Atmel Studio 6.0\BossacArduinoDue.bat
 REM *      Arguments: "C:\Program Files (x86)\arduino-1.5.2\hardware\tools\bossac.exe" "$(ProjectDir)\Release\$(ProjectFileName).bin"
 REM *      Checkbox "Use Output Window".
